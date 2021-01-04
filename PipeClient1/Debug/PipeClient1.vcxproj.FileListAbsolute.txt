@@ -1,0 +1,2 @@
+C:\Users\richa\source\repos\PipeClient1\Debug\PipeClient1.exe
+C:\Users\richa\source\repos\PipeClient1\Debug\PipeClient1.pdb
