@@ -6,13 +6,39 @@
 #include <string>
 #include "SideCarManager.h"
 
+#define BUFSIZE MAX_PATH
+
 SideCarManager::SideCarManager() {
     pipeHandle = NULL;
     isConnected = false;
+    start();
 }
 
 SideCarManager::~SideCarManager() {
     CloseHandle(pipeHandle);
+    closeProcess(processInfo);
+}
+
+int SideCarManager::start() {
+
+    TCHAR buffer[BUFSIZE];
+
+    DWORD directorySuccess = GetCurrentDirectory(BUFSIZE, buffer);
+    if (directorySuccess == 0)
+        return -1;
+    try {
+        std::wstring bufferW(&buffer[0]); //convert to wstring
+        std::string bufferString(bufferW.begin(), bufferW.end()); //and convert to string.
+        std::string pathForSidecar = "\\net5.0\\ZoomOSCSideCar.exe";
+        bufferString = bufferString.substr(0, bufferString.find_last_of('\\')); //remove current extension
+        bufferString = bufferString.append(pathForSidecar); //add on current directory path
+        LPCSTR path = bufferString.c_str();
+        processInfo = startup(path);
+        return 0;
+    }
+    catch (int e) {
+        return -2;
+    }
 }
 
 int SideCarManager::sendMessage(std::string message) {
@@ -98,4 +124,47 @@ wchar_t* SideCarManager::strToWstr(std::string text) {
     wchar_t* wstr = new wchar_t[wchars_num];
     MultiByteToWideChar(CP_UTF8, 0, text.c_str(), -1, wstr, wchars_num);
     return wstr;
+}
+
+PROCESS_INFORMATION SideCarManager::startup(LPCSTR lpApplicationName)
+{
+    // additional information
+    STARTUPINFOA si;
+    PROCESS_INFORMATION pi;
+
+    // set the size of the structures
+    ZeroMemory(&si, sizeof(si));
+    si.cb = sizeof(si);
+    ZeroMemory(&pi, sizeof(pi));
+
+    // start the program up
+    CreateProcessA
+    (
+        lpApplicationName,   // the path
+        NULL,                // Command line
+        NULL,                   // Process handle not inheritable
+        NULL,                   // Thread handle not inheritable
+        FALSE,                  // Set handle inheritance to FALSE
+        CREATE_NEW_CONSOLE,     // Opens file in a separate console
+        NULL,           // Use parent's environment block
+        NULL,           // Use parent's starting directory 
+        &si,            // Pointer to STARTUPINFO structure
+        &pi           // Pointer to PROCESS_INFORMATION structure
+    );
+    return pi;
+    // Close process and thread handles. 
+
+}
+
+void SideCarManager::closeProcess(PROCESS_INFORMATION pi) {
+    try {
+        TerminateProcess(pi.hProcess, 0);
+        TerminateProcess(pi.hThread, 0);
+        CloseHandle(pi.hProcess);
+        CloseHandle(pi.hThread);
+        return;
+    }
+    catch (int e) {
+        return;
+    }
 }

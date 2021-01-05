@@ -1,2 +1,49 @@
 ﻿  PipeClient1.cpp
-  PipeClient1.vcxproj -> C:\Users\richa\source\repos\PipeClient1\Debug\PipeClient1.exe
+C:\Users\richa\Downloads\HelperZoomOSC\HelperZoomOSC\StreamWeaver\bin\Release\PipeClient1\PipeClient1.cpp(58,16): warning C4101: 'e': unreferenced local variable
+  SideCarManager.cpp
+C:\Users\richa\Downloads\HelperZoomOSC\HelperZoomOSC\StreamWeaver\bin\Release\PipeClient1\SideCarManager.cpp(39,16): warning C4101: 'e': unreferenced local variable
+C:\Users\richa\Downloads\HelperZoomOSC\HelperZoomOSC\StreamWeaver\bin\Release\PipeClient1\SideCarManager.cpp(48,42): warning C4101: 'dwMode': unreferenced local variable
+C:\Users\richa\Downloads\HelperZoomOSC\HelperZoomOSC\StreamWeaver\bin\Release\PipeClient1\SideCarManager.cpp(48,12): warning C4101: 'cbRead': unreferenced local variable
+C:\Users\richa\Downloads\HelperZoomOSC\HelperZoomOSC\StreamWeaver\bin\Release\PipeClient1\SideCarManager.cpp(167,16): warning C4101: 'e': unreferenced local variable
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\xstring(2468,23): warning C4244: 'argument': conversion from 'wchar_t' to 'const _Elem', possible loss of data
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\xstring(2479): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)' being compiled
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\xstring(2479): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)' being compiled
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\xstring(2459): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)' being compiled
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\xstring(2459): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)' being compiled
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Users\richa\Downloads\HelperZoomOSC\HelperZoomOSC\StreamWeaver\bin\Release\PipeClient1\SideCarManager.cpp(31): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\richa\Downloads\HelperZoomOSC\HelperZoomOSC\StreamWeaver\bin\Release\PipeClient1\SideCarManager.cpp(31): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+  Generating Code...
+C:\Users\richa\Downloads\HelperZoomOSC\HelperZoomOSC\StreamWeaver\bin\Release\PipeClient1\SideCarManager.cpp(68): warning C4715: 'SideCarManager::sendMessage': not all control paths return a value
+  PipeClient1.vcxproj -> C:\Users\richa\Downloads\HelperZoomOSC\HelperZoomOSC\StreamWeaver\bin\Release\PipeClient1\Debug\PipeClient1.exe

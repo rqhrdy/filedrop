@@ -1,2 +1,4 @@
 C:\Users\richa\source\repos\PipeClient1\Debug\PipeClient1.exe
 C:\Users\richa\source\repos\PipeClient1\Debug\PipeClient1.pdb
+C:\Users\richa\Downloads\HelperZoomOSC\HelperZoomOSC\StreamWeaver\bin\Release\PipeClient1\Debug\PipeClient1.exe
+C:\Users\richa\Downloads\HelperZoomOSC\HelperZoomOSC\StreamWeaver\bin\Release\PipeClient1\Debug\PipeClient1.pdb
